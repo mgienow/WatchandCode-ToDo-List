@@ -49,27 +49,16 @@ toggleAll:function(){
       }
       // check if condition (is everything true?) is met:
     //case 1: if everything is true (completed), make everything false (not completed):
-    /*if (completedTodos === totalTodos) {
-      for(var i=0; i<totalTodos; i++){
-        this.todos[i].completed = false;
-      }
-      }
-      //otherwise, make everything true (not completed):
-      else {
-        for(var i=0; i<totalTodos; i++){
-          this.todos[i].completed=true;
-        }
-      }*/
-
-      if (completedTodos === totalTodos) {
-      for (var i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = false; // If everything is true, make it false
-      }
-    } else {
-        this.todos[i].completed = true; // Otherwise, make everything true
+  for (var i=0; i<totalTodos; i++) {
+    if (completedTodos==totalTodos) {
+      this.todos[i].completed = false;
+    } else {    //otherwise, make everything true (not completed):
+      this.todos[i].completed=true;
     }
-    this.displayTodos();
-  }
+}
+this.displayTodos();
+}
+
 };
 
 var displayTodosButton = document.getElementById("displayTodosButton");
